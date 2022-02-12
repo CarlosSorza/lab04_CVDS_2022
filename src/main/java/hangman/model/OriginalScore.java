@@ -6,7 +6,16 @@ public class OriginalScore implements GameScore{
     @param  correctCount - incorrectCount
     @throws Si el puntaje es menor a 0 genera una exepcion
      */
-    public int calculateScore(int correctCount, int incorrectCount){
-
+    public int calculateScore(int correctCount, int incorrectCount)throws HangmanException{
+        int score;
+        if(CorrectCount < 0 || IncorrectCount < 0) {throw new HangmanException(HangmanException.INVALID_PARAMETERS);}
+        score = 100;
+        if(IncorrectCount > 0 ){
+            score -= IncorrectCount * 10;
+        }
+        if  (score < 0){    
+            score = 0;            
+        }
+        return score;
     }
 }
