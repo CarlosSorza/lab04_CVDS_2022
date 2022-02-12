@@ -1,6 +1,5 @@
 package hangman.model;
 public interface GameScore{
-    public int calculateScore(int correctCount, int incorrectCount){
+    int calculateScore(int correctCount, int incorrectCount) throws HangmanException;
 
-    }
 }

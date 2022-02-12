@@ -24,5 +24,4 @@ public class BonusScore implements GameScore{
                  }
                 return score;
             }
-    }
 }
