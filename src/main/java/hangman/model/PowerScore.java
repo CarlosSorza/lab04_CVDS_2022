@@ -9,8 +9,8 @@ public class PowerScore implements GameScore{
     @throws Si el puntaje es menor a 0 genera una exepcion
      */
     public int calculateScore(int correctCount, int incorrectCount) throws HangmanException{
-        int score;
-        if(CorrectCount < 0 || IncorrectCount < 0) {throw new HangmanException(HangmanException.INVALID_PARAMETERS);}
+        int score=0;
+        if(correctCount < 0 || incorrectCount < 0) {throw new HangmanException(HangmanException.INVALID_PARAMETERS);}
         score = 0;
         if(correctCount > 0){
                 for (int i = 0; i < correctCount; i++){
@@ -19,14 +19,14 @@ public class PowerScore implements GameScore{
                 }
         }
         if(incorrectCount>0){
-            score -= 8 * IncorrectCount;
+            score -= 8 * incorrectCount;
         }
         if(correctCount>0 && incorrectCount>0){
             for (int i = 0; i < correctCount; i++){
 
                     score += Math.pow(5, i+1);
                 }
-            score -= 8 * IncorrectCount;  
+            score -= 8 * incorrectCount;  
         }
         if(score > 500){
             score = 500;

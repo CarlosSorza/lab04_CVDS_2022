@@ -11,8 +11,12 @@ package hangman.setup.guice;
  */
 
 import hangman.model.French;
+import hangman.model.GameScore;
 import hangman.model.Language;
+import hangman.model.PowerScore;
+import hangman.model.Spanish;
 import hangman.model.dictionary.HangmanDictionary;
+import hangman.model.dictionary.SpanishDictionaryDataSource;
 import hangman.model.dictionary.FrenchDictionaryDataSource;
 import hangman.view.HangmanNoviolentoPanel;
 import hangman.view.HangmanPanel;

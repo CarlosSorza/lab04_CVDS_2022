@@ -1,5 +1,6 @@
 package hangman.setup.factoryMethod;
 
+import hangman.model.GameScore;
 import hangman.model.Language;
 import hangman.model.dictionary.HangmanDictionary;
 import hangman.view.HangmanPanel;

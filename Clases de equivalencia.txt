@@ -1,0 +1,35 @@
+        /**
+        
+        Original Score
+                        Clase de equivalencia 		               		        Resultado
+        # Letras correctas	     # Letras Incorrectas
+        	   < 0		       			                                        Incorrecto
+        		                       < 0	      		                        Incorrecto
+        	  lc >= 0	                 0	                        		    100
+        	  lc > 0	        li > 0  ^ li < 11	         		            100 - (10 * li)
+        	  lc > 0	               li > 11	                       			    0
+        */
+
+        /**
+        Bonus Score
+                        Clase de equivalencia 		                        Resultado
+        # Letras correctas	    # Letras Incorrectas
+        	 < 0 		                                                	Incorrecto
+        		                     < 0 	                          		Incorrecto
+        	lc >= 0 	               0	                             	lc * 10
+        	lc > 0 	             	    li < lc 	                     	(lc * 10) - (li * 5)
+        	lc > 0 	                    li >= lc * 2 	                     0
+        */
+
+        /**
+        
+        Power Score
+                            Clase de equivalencia 		                        Resultado
+        # Letras correctas	    # Letras Incorrectas
+        	< 0 		                                            			Incorrecto
+        		                     < 0	                           		    Incorrecto
+        	lc > 0 	                       0	                        		5^i i es la poscicion de la letra
+        	  0	                    li > 0 	                            		0
+        	lc >= 4 	               0	                                	500
+        	lc > 1	                    li > 0 	                   			    5^i - (8*li) donde i es la poscicion de la letra
+        */
